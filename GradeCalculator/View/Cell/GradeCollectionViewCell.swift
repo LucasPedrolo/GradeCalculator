@@ -9,7 +9,7 @@ import UIKit
 
 class GradeCollectionViewCell: BaseCell {
     
-    var grade: Grade? {
+    var grade: Register? {
         didSet {
             subjectLabel.text = grade?.subject
         }

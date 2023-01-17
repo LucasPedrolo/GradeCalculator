@@ -9,7 +9,7 @@ import UIKit
 
 class GradeDetailsView: BaseView {
     
-    var grade: Grade? {
+    var grade: Register? {
         didSet {
             nameLabel.text = "Name: \(grade?.name ?? "Error")"
             subjectLabel.text = "Subject: \(grade?.subject ?? "Error")"
@@ -84,6 +84,15 @@ class GradeDetailsView: BaseView {
         return grade
     }()
     
+    lazy var calcGradeLabel: UILabel = {
+        let calc = UILabel()
+        calc.text = ""
+        calc.textColor = .black
+        calc.font = UIFont.systemFont(ofSize: 20)
+        
+        return calc
+    }()
+    
     lazy var grade1TxtField: UITextField = {
         let grade1 = UITextField()
         grade1.placeholder = "First Grade"
@@ -139,7 +148,7 @@ class GradeDetailsView: BaseView {
         
         return grade4
     }()
-
+    
     override func addSubviews() {
         addSubview(titleLabel)
         addSubview(nameLabel)
@@ -152,6 +161,7 @@ class GradeDetailsView: BaseView {
         addSubview(grade2Label)
         addSubview(grade3Label)
         addSubview(grade4Label)
+        addSubview(calcGradeLabel)
     }
     
     override func setConstraints() {
@@ -176,5 +186,7 @@ class GradeDetailsView: BaseView {
         grade3Label.anchor(top: grade3TxtField.topAnchor, leading: nil, bottom: nil, trailing: grade3TxtField.leadingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: -10), size: .init(width: 100, height: 40))
         
         grade4Label.anchor(top: grade4TxtField.topAnchor, leading: nil, bottom: nil, trailing: grade4TxtField.leadingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: -10), size: .init(width: 100, height: 40))
+        
+        calcGradeLabel.anchor(top: grade4Label.bottomAnchor, leading: nil, bottom: nil, trailing: grade4Label.trailingAnchor, padding: .init(top: 20, left: 0, bottom: 0, right: 0), size: .init(width: 100, height: 40))
     }
 }

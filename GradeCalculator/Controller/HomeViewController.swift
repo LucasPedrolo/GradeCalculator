@@ -8,9 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     var homeView = HomeView()
-    var grade: Grade?
+    var grade: Register?
     
     override func loadView() {
         view = homeView
@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         homeView.seeGradeButton.addTarget(self, action: #selector(navigationGrade), for: .touchUpInside)
     }
     
-    func getData(data: Grade) {
+    func getData(data: Register) {
         self.grade = data
     }
     
@@ -44,6 +44,6 @@ class HomeViewController: UIViewController {
         
         navigationController?.pushViewController(goGrade, animated: true)
     }
-
+    
 }
 

@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
         let validation = viewModel.dataGrade(grade1: registerView.grade1TxtField.text ?? defString, grade2: registerView.grade2TxtField.text ?? defString, grade3: registerView.grade3TxtField.text ?? defString, grade4: registerView.grade4TxtField.text ?? defString, name: registerView.nameTxtField.text ?? defString, subject: registerView.subjectTxtField.text ?? defString)
         
         if validation != nil {
-            goHome.getData(data: validation ?? Grade())
+            goHome.getData(data: validation ?? Register())
             navigationController?.pushViewController(goHome, animated: true)
         } else {
             print("Error")

@@ -5,9 +5,9 @@
 //  Created by unicred on 13/01/23.
 //
 
-import UIKit
+import Foundation
 
-struct Grade {
+struct Register {
     
     var name: String?
     var subject: String?

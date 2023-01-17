@@ -9,7 +9,7 @@ import UIKit
 
 class GradeCollectionViewController: UIViewController {
     
-    var grade: [Grade]?
+    var grade: [Register]?
     let gradeView = GradeCollectionView()
     private let cellId = "cellId"
     
@@ -28,7 +28,7 @@ class GradeCollectionViewController: UIViewController {
         gradeView.collectionView.register(GradeCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    func getData(data: Grade) {
+    func getData(data: Register) {
         grade = [data]
     }
 }
