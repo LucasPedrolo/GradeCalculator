@@ -26,6 +26,7 @@ class RegisterViewController: UIViewController {
     
     func addDelegates() {
         registerView.nameTxtField.delegate = self
+        registerView.subjectTxtField.delegate = self
         registerView.grade1TxtField.delegate = self
         registerView.grade2TxtField.delegate = self
         registerView.grade3TxtField.delegate = self

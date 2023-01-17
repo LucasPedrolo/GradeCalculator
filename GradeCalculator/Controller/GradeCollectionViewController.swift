@@ -38,6 +38,7 @@ extension GradeCollectionViewController: UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if let item = grade?.count {
+            
             return item
         }
         

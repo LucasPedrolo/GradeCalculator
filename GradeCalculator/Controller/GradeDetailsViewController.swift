@@ -21,6 +21,6 @@ class GradeDetailsViewController: UIViewController {
     }
     
     func getData(data: Grade) {
-        grade = [data]
+        gradeDetailsView.grade = data
     }
 }
