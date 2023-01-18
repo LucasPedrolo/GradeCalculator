@@ -22,7 +22,7 @@
 		4DB37A24297573850031100A /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A23297573850031100A /* BaseCell.swift */; };
 		4DB37A262975788A0031100A /* GradeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A252975788A0031100A /* GradeCollectionViewCell.swift */; };
 		4DB37A2829757A670031100A /* GradeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A2729757A670031100A /* GradeCollectionView.swift */; };
-		4DB37A2A29757BF10031100A /* GradeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A2929757BF10031100A /* GradeDetailsViewController.swift */; };
+		4DB37A2A29757BF10031100A /* GradeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A2929757BF10031100A /* GradeDetailsTableViewController.swift */; };
 		4DB37A2C29757C0A0031100A /* GradeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A2B29757C0A0031100A /* GradeDetailsView.swift */; };
 		4DB37A2E2976D6C50031100A /* GradeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A2D2976D6C50031100A /* GradeDetailsViewModel.swift */; };
 		4DB37A302976D9560031100A /* GradeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB37A2F2976D9560031100A /* GradeData.swift */; };
@@ -46,7 +46,7 @@
 		4DB37A23297573850031100A /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4DB37A252975788A0031100A /* GradeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DB37A2729757A670031100A /* GradeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCollectionView.swift; sourceTree = "<group>"; };
-		4DB37A2929757BF10031100A /* GradeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailsViewController.swift; sourceTree = "<group>"; };
+		4DB37A2929757BF10031100A /* GradeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4DB37A2B29757C0A0031100A /* GradeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailsView.swift; sourceTree = "<group>"; };
 		4DB37A2D2976D6C50031100A /* GradeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailsViewModel.swift; sourceTree = "<group>"; };
 		4DB37A2F2976D9560031100A /* GradeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeData.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				4D39B0342971BA53001F1028 /* HomeViewController.swift */,
 				4D39B0542971CB71001F1028 /* RegisterViewController.swift */,
 				4DB37A202975733C0031100A /* GradeCollectionViewController.swift */,
-				4DB37A2929757BF10031100A /* GradeDetailsViewController.swift */,
+				4DB37A2929757BF10031100A /* GradeDetailsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 				4DB37A2829757A670031100A /* GradeCollectionView.swift in Sources */,
 				4DB37A2C29757C0A0031100A /* GradeDetailsView.swift in Sources */,
 				4D39B0552971CB71001F1028 /* RegisterViewController.swift in Sources */,
-				4DB37A2A29757BF10031100A /* GradeDetailsViewController.swift in Sources */,
+				4DB37A2A29757BF10031100A /* GradeDetailsTableViewController.swift in Sources */,
 				4D39B0352971BA53001F1028 /* HomeViewController.swift in Sources */,
 				4D39B0532971BFAF001F1028 /* BaseView.swift in Sources */,
 				4D39B0572971CB7B001F1028 /* RegisterView.swift in Sources */,

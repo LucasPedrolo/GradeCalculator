@@ -35,6 +35,7 @@ class GradeCollectionViewController: UIViewController {
 
 extension GradeCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if let item = grade?.count {
