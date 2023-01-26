@@ -34,11 +34,21 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func navigation() {
-        let goHome = HomeViewController()
-        let validation = viewModel.dataGrade(grade1: registerView.grade1TxtField.text ?? defString, grade2: registerView.grade2TxtField.text ?? defString, grade3: registerView.grade3TxtField.text ?? defString, grade4: registerView.grade4TxtField.text ?? defString, name: registerView.nameTxtField.text ?? defString, subject: registerView.subjectTxtField.text ?? defString)
+        let goHome = GradeCollectionViewController()
+        let validation = viewModel.dataGrade(
+            name: registerView.nameTxtField.text ?? defString,
+                   subject: Subject(
+                       titleSubject: registerView.subjectTxtField.text,
+                       grades: GradeData(
+                           firstGrande: Int(registerView.grade1TxtField.text ?? defString) ?? defInt,
+                           secondGrade: Int(registerView.grade1TxtField.text ?? defString) ?? defInt,
+                           thirdGrade: Int(registerView.grade1TxtField.text ?? defString) ?? defInt,
+                           fourthGrade: Int(registerView.grade1TxtField.text ?? defString) ?? defInt)))
         
         if validation != nil {
-            goHome.getData(data: validation ?? Register())
+            if let validation = validation {
+                goHome.getData(data: validation)
+            }
             navigationController?.pushViewController(goHome, animated: true)
         } else {
             print("Error")
@@ -68,7 +78,6 @@ extension RegisterViewController: UITextFieldDelegate {
             registerView.grade4TxtField.resignFirstResponder()
             navigation()
         }
-        
         return true
     }
 }

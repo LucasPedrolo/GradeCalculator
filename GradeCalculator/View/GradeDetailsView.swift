@@ -11,12 +11,12 @@ class GradeDetailsView: BaseView {
     
     var grade: Register? {
         didSet {
-            nameLabel.text = "Name: \(grade?.name ?? "Error")"
-            subjectLabel.text = "Subject: \(grade?.subject ?? "Error")"
-            grade1TxtField.text = grade?.grade1
-            grade2TxtField.text = grade?.grade2
-            grade3TxtField.text = grade?.grade3
-            grade4TxtField.text = grade?.grade4
+            nameLabel.text = "Name: \(grade?.name ?? defString)"
+            subjectLabel.text = "Subject: \(grade?.subject?.titleSubject ?? defString)"
+            grade1TxtField.text = "\(grade?.subject?.grades?.firstGrande ?? defInt)"
+            grade2TxtField.text = "\(grade?.subject?.grades?.secondGrade ?? defInt)"
+            grade3TxtField.text = "\(grade?.subject?.grades?.thirdGrade ?? defInt)"
+            grade4TxtField.text = "\(grade?.subject?.grades?.fourthGrade ?? defInt)"
         }
     }
     

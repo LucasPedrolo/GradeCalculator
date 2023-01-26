@@ -9,7 +9,7 @@ import UIKit
 
 class GradeCollectionViewController: UIViewController {
     
-    var grade: [Register]?
+    var grade: [Register] = []
     let gradeView = GradeCollectionView()
     private let cellId = "cellId"
     
@@ -29,7 +29,7 @@ class GradeCollectionViewController: UIViewController {
     }
     
     func getData(data: Register) {
-        grade = [data]
+        grade.append(data)
     }
 }
 
@@ -38,20 +38,15 @@ extension GradeCollectionViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if let item = grade?.count {
-            
-            return item
-        }
-        
-        return 0
+        return grade.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? GradeCollectionViewCell
         
-        if let item = grade?[indexPath.item] {
-            cell?.grade = item
-        }
+        
+        cell?.grade = grade[indexPath.item]
+        
         
         return cell ?? UICollectionViewCell()
     }
@@ -63,9 +58,8 @@ extension GradeCollectionViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let gradeDetails = GradeDetailsViewController()
-        if let grade = self.grade {
-            gradeDetails.getData(data: grade[indexPath.item])
-        }
+        gradeDetails.getData(data: grade[indexPath.item])
+    
         navigationController?.pushViewController(gradeDetails, animated: true)
     }
 }

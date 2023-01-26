@@ -10,9 +10,5 @@ import Foundation
 struct Register {
     
     var name: String?
-    var subject: String?
-    var grade1: String?
-    var grade2: String?
-    var grade3: String?
-    var grade4: String?
+    var subject: Subject?
 }

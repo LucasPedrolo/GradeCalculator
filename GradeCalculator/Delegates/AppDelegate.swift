@@ -7,6 +7,7 @@
 
 import UIKit
 
+let defInt = Int(integerLiteral: 0)
 let defString = String(stringLiteral: "")
 
 @main

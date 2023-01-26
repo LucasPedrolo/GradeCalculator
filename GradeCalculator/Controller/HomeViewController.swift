@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     var homeView = HomeView()
     var grade: Register?
+    let userDefault = UserDefaults.standard
     
     override func loadView() {
         view = homeView
@@ -26,6 +27,7 @@ class HomeViewController: UIViewController {
     }
     
     func getData(data: Register) {
+        
         self.grade = data
     }
     
@@ -44,6 +46,4 @@ class HomeViewController: UIViewController {
         
         navigationController?.pushViewController(goGrade, animated: true)
     }
-    
 }
-

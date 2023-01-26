@@ -146,5 +146,4 @@ class RegisterView: BaseView {
         
         goHomeButton.anchor(top: grade4TxtField.bottomAnchor, leading: grade4TxtField.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 80, left: 0, bottom: 20, right: 0), size: .init(width: 250, height: 50))
     }
-    
 }

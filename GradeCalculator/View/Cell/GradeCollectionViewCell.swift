@@ -11,7 +11,7 @@ class GradeCollectionViewCell: BaseCell {
     
     var grade: Register? {
         didSet {
-            subjectLabel.text = grade?.subject
+            subjectLabel.text = grade?.subject?.titleSubject
         }
     }
     
